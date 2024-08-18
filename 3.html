@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <h1 class="heading">Counter</h1>
+    <button class="increament" onclick="increament()">+</button>
+    <span id="number" style='font-weight: bold; font-size: 32px;'>0</span>
+    <button class="decreament" onclick="decreament()">-</button>
+
+    <script>
+        let number = document.getElementById('number')
+        
+        function increament(){
+            number.innerHTML = Number(number.innerHTML) + 1;
+        }
+
+        function decreament(){
+            if(Number(number.innerHTML)> 0){
+                number.innerHTML = Number(number.innerHTML) - 1;
+            }else{
+                alert('Counter is going beyound 0.')
+            }
+        }
+    </script>
+</body>
+</html>

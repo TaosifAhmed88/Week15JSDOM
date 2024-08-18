@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    <h1 id="text">Your Image is Visible</h1>
+    <button id="btn" onclick="toggleimage()">Toggle Image</button> <br>
+    <img id="image" style="margin-top: 1rem;" src="./3.jpg" alt="" height="200px">
+
+    <script>
+        let text = document.getElementById('text')
+        let image = document.getElementById('image')
+
+        function toggleimage(){
+            if(image.style.opacity == 100){
+                image.style.opacity = 0;
+                text.innerText = 'Your Image is Hidden'
+            }else{
+                image.style.opacity = 100;
+                text.innerText = 'Your Image is Visible'
+            }
+        }
+    </script>
+</body>
+</html>

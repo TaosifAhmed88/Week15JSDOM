@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <h1 id="h1">Update Profile Picture</h1> 
+    <input type="file" id="input" onchange="profilechanger()">
+    <h3 id="h3">Your Profile Picture</h3>
+    <img id="previewinput" src="" alt="No Profile Picture" height="100px">
+
+    <script>
+        let input = document.getElementById('input')
+
+        let previewinput = document.getElementById('previewinput')
+
+        function profilechanger(){
+            let filereader = new FileReader();
+
+            filereader.onload = function (e){
+                previewinput.src = e.target.result;
+            };
+            filereader.readAsDataURL(input.files[0]);
+        }
+
+        
+    </script>
+</body>
+</html>
